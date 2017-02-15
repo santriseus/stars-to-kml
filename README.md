@@ -1,21 +1,21 @@
-# Export your google maps :star: (favorites, a.k.a. bookmarks) to the kml file.
+## Export your google maps :star: (favorites, a.k.a. bookmarks) to the kml file.
 
-## Step 1. Install prerequisites.
-### 1.1 Install nodejs [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
-### 1.2 Clone repository.
-### 1.3 ``cd`` to clonned repository.
-### 1.4 Run ``npm install``
+### Step 1. Install prerequisites.
+  1. Install nodejs [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
+  2. Clone repository.
+  3. ``cd`` to clonned repository.
+  4. Run ``npm install``
 
-## Step 2. Download html file with bookmarks from google maps.
-### 1.1 Go to Google Bookmarks: [https://www.google.com/bookmarks/](https://www.google.com/bookmarks/).
-### 1.2 On the bottom left, click "Export bookmarks".
-### 1.3 Save the GoogleBookmarks.html file to the project folder.
+### Step 2. Download html file with bookmarks from google maps.
+  1. Go to Google Bookmarks: [https://www.google.com/bookmarks/](https://www.google.com/bookmarks/).
+  2. On the bottom left, click "Export bookmarks".
+  3. Save the GoogleBookmarks.html file to the project folder.
 
-## Step 3. Run script.
-### 3.1 Run ``npm install``
-### 3.1 Find GoogleBookmarks.kml in the project folder.
+### Step 3. Run script.
+  1. Run ``npm install``
+  2. Find GoogleBookmarks.kml in the project folder.
 
-# Attention. How it works and why you should not fully rely on this script.
+## Attention. How it works and why you should not fully rely on this script.
 Algorythm is following:
 
 1. Script opens the links provided in the GoogleBookmarks.html using the Chrome user agent:
