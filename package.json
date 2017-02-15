@@ -1,0 +1,15 @@
+{
+  "name": "stars-to-kml",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "santriseus",
+  "license": "MIT",
+  "dependencies": {
+    "osmosis": "^1.1.2",
+    "tokml": "^0.4.0"
+  }
+}
