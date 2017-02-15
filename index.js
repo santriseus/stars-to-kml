@@ -43,8 +43,9 @@ osmosis.parse(fs.readFileSync('GoogleBookmarks.html'))
             "properties": {
                 "name": result.name
             }
-        })
+        });
 
+        //TODO: Remove that hach and make the method done() below work.
         if (fs.existsSync("GoogleBookmarks.kml")) {
             fs.unlinkSync("GoogleBookmarks.kml");
         }
