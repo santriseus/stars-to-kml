@@ -17,7 +17,7 @@ osmosis.parse(fs.readFileSync('GoogleBookmarks.html'))
     .follow('@href')
     .find('meta@content')
     .set('meta')
-    .then((context, data, next) => {
+    .then((context, data, next, done) => {
         if (data.meta.indexOf('maps.google.com') !== -1) {
             var parsedQuery = querystring.parse(url.parse(data.meta).query);
             if (parsedQuery.markers) {
@@ -31,6 +31,7 @@ osmosis.parse(fs.readFileSync('GoogleBookmarks.html'))
             delete data.meta;
             next(context, data);
         }
+        done();
     })
     .data(function (result) {
         console.log(result);
@@ -44,16 +45,11 @@ osmosis.parse(fs.readFileSync('GoogleBookmarks.html'))
                 "name": result.name
             }
         });
-
-        //TODO: Remove that hach and make the method done() below work.
-        if (fs.existsSync("GoogleBookmarks.kml")) {
-            fs.unlinkSync("GoogleBookmarks.kml");
-        }
-        fs.writeFileSync("GoogleBookmarks.kml", tokml(output));
     })
     .log(console.log)
     .error(console.log)
     .done(() => {
+        console.log("Done")
         if (fs.existsSync("GoogleBookmarks.kml")) {
             fs.unlinkSync("GoogleBookmarks.kml");
         }
